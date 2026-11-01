@@ -765,4 +765,4 @@ const msg=rest.slice(end).trim(),btns=nm==='ask'?['Yes','No']:['OK'],ps=[];
 for(let i=0;i<count;i++){ps.push(dlg(ty,esc(title),msg?esc(msg):`This is ${'aeiou'.includes(nm[0])?'an':'a'} ${nm} window.`+(count>1?` (window ${i+1} of ${count})`:''),btns,{n:i}));if(count>1)await new Promise(r=>setTimeout(r,90))}
 const rs=await Promise.all(ps);p(nm==='ask'?'answers: '+rs.map(r=>r===0?'Yes':r===1?'No':'closed').join(', '):'closed '+count+' window'+(count>1?'s':''))}
 boot();
-</script></body></html>
+</script></body></html> 
